@@ -1,0 +1,16 @@
+.slide-motion(@className, @keyframeName) {
+    .make-motion(@className, @keyframeName);
+    .@{className}-enter-active, .@{className}-appear {
+        opacity: 0;
+        animation-timing-function: @ease-in-out;
+    }
+    .@{className}-leave-active {
+        animation-timing-function: @ease-in-out;
+    }
+}
+
+.slide-motion(ivu-anim-transition-drop, ivuTransitionDrop);
+.slide-motion(ivu-anim-slide-up, ivuSlideUp);
+.slide-motion(ivu-anim-slide-down, ivuSlideDown);
+.slide-motion(ivu-anim-slide-left, ivuSlideLeft);
+.slide-motion(ivu-anim-slide-right, ivuSlideRight);
